@@ -1,0 +1,116 @@
+.header_container {
+  padding: 0 20px;
+}
+
+.header {
+  min-height: 25rem;
+  margin: 0 auto;
+  background-color: #3bb7ed;
+  border-radius: 100px;
+  filter: drop-shadow(9px 23px 51px rgba(0, 0, 0, 0.38));
+  max-width: 90%;
+  height: 424px;
+}
+
+.header p, .header .icons, .header .buttons {
+  display: none;
+}
+
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.header .nav .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.header .nav .icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.header .nav h1 {
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.header .lightmode {
+  color: white;
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.header ul {
+  margin-right: 40px;
+  list-style-type: none;
+  width: 32px;
+}
+
+.header ul li {
+  display: block;
+  border-radius: 20px;
+}
+
+.header ul .li1 {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+}
+
+.header ul .li2 {
+  width: 80%;
+  height: 4px;
+  margin: 8px 0;
+  background-color: white;
+  margin-left: 7px;
+}
+
+.nav {
+  padding-top: 20px;
+}
+
+.nav div {
+  display: flex;
+  align-items: center;
+}
+
+.nav .nav-child1 {
+  margin-left: 40px;
+}
+
+.nav .nav-child2 {
+  margin-right: 30px;
+}
+
+.circle1 {
+  width: 633px;
+  height: 574px;
+  background-color: rgba(131, 232, 254, 0.24);
+  border-radius: 80%;
+  margin: auto;
+  transform: translateY(-16px);
+}
+
+.circle2 {
+  width: 362px;
+  height: 151px;
+  border-radius: 48px;
+  background-color: rgba(131, 232, 254, 0.7);
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(144px);
+}
+
+.circle2 img {
+  display: none;
+}

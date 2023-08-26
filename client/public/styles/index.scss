@@ -1,0 +1,15 @@
+// @import "variables";
+// @import "colors";
+@import "./reset.scss";
+
+@import "./header.scss";
+@import "./main.scss";
+@import "./aboutme.scss";
+@import "./skills.scss";
+@import "./projects.scss";
+@import "./education.scss";
+@import "./contact.scss";
+@import "./footer.scss";
+
+// media screen
+@import "./small.scss";

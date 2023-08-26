@@ -1,0 +1,107 @@
+.main {
+  max-width: 1046px;
+  height: 407px;
+  z-index: 50;
+  //   border: 1px solid gray;
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 100px;
+  box-shadow: 13px 17px 26px 1px rgba(5, 5, 5, 0.21);
+  //   transform: translateY(0px);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  .main-child {
+    // width: max-content;
+    // width: 1fr;
+    flex: 1;
+    max-width: 280px;
+    height: 100%;
+    // border: 1px solid gray;
+    h3 {
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 48px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #ff00e5bd;
+      margin-top: 80px;
+    }
+    div {
+      h5 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 36px;
+        // letter-spacing: -0.025em;
+        text-align: left;
+      }
+      p {
+        font-size: 14px;
+        line-height: 20px;
+        text-indent: 40px;
+        color: #585858;
+      }
+    }
+  }
+  // .main-child1{
+  // display: flex;
+  // flex-direction: column;
+  // }
+}
+
+.main_btn_parent {
+  padding-top: 26px;
+  display: flex;
+  justify-content: space-between;
+  .main_btn {
+    background-color: #3daf9b;
+    color: white;
+    border: none;
+    font-size: 12px;
+    // width: 108px;
+    padding: 10px 14px;
+    // height: 34px;
+    border-radius: 10px;
+    // margin: 0 10px;
+  }
+}
+.main-child1{
+  // margin:0 0px;
+  padding-left: 40px;
+}
+.main-child2{
+  padding-top: 40px;
+
+  img{
+    object-fit: cover;
+  }
+}
+.main-child3{
+  color: #008AD8;
+  text-align: center;
+  padding-top: 80px;
+}
+.main-child3_child{
+  display: flex;
+  max-width: 180px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 70px;
+  // justify-content: space-around;
+  .item{
+    width: 62px;
+    height: 62px;
+    border-radius: 10px;
+    overflow: hidden;
+    // border:1px solid gray;
+    margin: 14px;
+    
+  }
+  .item2{
+    border: 1px solid gray;
+  }
+}
