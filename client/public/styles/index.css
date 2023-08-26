@@ -129,7 +129,7 @@ p, h1, h2, h3, h4, h5, h6 {
   border-radius: 48px;
   background-color: rgba(131, 232, 254, 0.7);
   position: absolute;
-  top: -12px;
+  top: -34px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -685,13 +685,13 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-left: 20px;
   }
   .header .circle1 {
-    width: 252px;
+    width: 232px;
     height: 295px;
     transform: translateY(36px);
     border-radius: 49px;
   }
   .header .circle2 {
-    width: 208px;
+    width: 196px;
     height: 241px;
     border-radius: 38px;
     z-index: 30;
@@ -700,7 +700,7 @@ p, h1, h2, h3, h4, h5, h6 {
     align-items: center;
   }
   .header .circle2 .circle1_child {
-    width: 80%;
+    width: 84%;
     height: 80%;
     background-color: white;
     position: relative;
@@ -755,8 +755,9 @@ p, h1, h2, h3, h4, h5, h6 {
     font-size: 32px;
   }
   .nav ul {
-    width: 30px;
+    width: 24px;
     margin-right: 20px;
+    overflow: hidden;
   }
   .nav ul .li1 {
     height: 4px;
@@ -888,6 +889,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (max-width: 992px) {
+  .nav{
+    padding-top: 0;
+  }
   .aboutme_container {
     padding: 0;
   }
