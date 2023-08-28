@@ -10,16 +10,29 @@ body {
   overflow-x: hidden;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -37,7 +50,9 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 424px;
 }
 
-.header p, .header .icons, .header .buttons {
+.header p,
+.header .icons,
+.header .buttons {
   display: none;
 }
 
@@ -129,7 +144,7 @@ p, h1, h2, h3, h4, h5, h6 {
   border-radius: 48px;
   background-color: rgba(131, 232, 254, 0.7);
   position: absolute;
-  top: -34px;
+  top: -12px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -215,7 +230,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .main-child3 {
-  color: #008AD8;
+  color: #008ad8;
   text-align: center;
   padding-top: 80px;
 }
@@ -405,7 +420,7 @@ p, h1, h2, h3, h4, h5, h6 {
   max-height: 360px;
   overflow: hidden;
   border-radius: 20px;
-  margin: 38px 38px;
+  margin: 38px 10px;
   box-shadow: 16px 16px 100px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -423,7 +438,12 @@ p, h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   margin: 0 auto;
-  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 
 .education {
@@ -446,7 +466,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .container2::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 61px;
@@ -473,7 +493,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .container2 .item::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 150px;
   z-index: -1;
@@ -485,7 +505,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .container2 .item::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 10px;
   height: 10px;
@@ -549,16 +569,15 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .contact h3 {
-  font-size: 73px;
-  font-weight: 400;
-  letter-spacing: 0em;
+
+
   text-align: center;
   margin-bottom: 28px;
-  font-size: 56px;
+  font-size: 44px;
   font-weight: 700;
-  line-height: 84px;
-  letter-spacing: 0em;
   color: #2b7dd5;
+  /* line-height: 42px; */
+  margin-bottom: 40px;
 }
 
 .contact-form {
@@ -567,7 +586,9 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0 30px;
 }
 
-.contact-form input, .contact-form textarea, .contact-form button {
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
   display: block;
   width: 100%;
   padding: 22px 0;
@@ -675,32 +696,42 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 40px;
     font-weight: 600;
   }
+  .header .nav {
+    padding-top: 0;
+  }
+  .header .nav h1 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
   .header .nav .icon {
     width: 40px;
     height: 40px;
     border: 2px solid white;
     margin-left: 0;
+    margin-right: 12px;
   }
   .header .nav .nav-child1 {
-    margin-left: 20px;
+    margin-left: 12px;
   }
   .header .circle1 {
-    width: 232px;
+    width: 252px;
     height: 295px;
     transform: translateY(36px);
     border-radius: 49px;
   }
   .header .circle2 {
-    width: 196px;
+    width: 208px;
     height: 241px;
     border-radius: 38px;
     z-index: 30;
     display: flex;
     justify-content: center;
     align-items: center;
+    top: -40px;
   }
   .header .circle2 .circle1_child {
-    width: 84%;
+    width: 80%;
     height: 80%;
     background-color: white;
     position: relative;
@@ -749,15 +780,18 @@ p, h1, h2, h3, h4, h5, h6 {
   }
   .education h3 {
     text-align: center;
-    font-size: 46px;
+    /* font-size: 46px; */
+    font-size: 34px;
   }
   .nav .nav-child2 .lightmode {
-    font-size: 32px;
+    font-size: 22px;
+  }
+  .nav .nav-child2 .menu {
+    margin-right: 10px;
   }
   .nav ul {
-    width: 24px;
+    width: 30px;
     margin-right: 20px;
-    overflow: hidden;
   }
   .nav ul .li1 {
     height: 4px;
@@ -881,7 +915,7 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 60%;
     padding: 0;
     border-radius: 6px;
-    font-size: 24px;
+    font-size: 12px;
   }
   .project-container .project-items img {
     border-radius: 10px;
@@ -889,9 +923,6 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (max-width: 992px) {
-  .nav{
-    padding-top: 0;
-  }
   .aboutme_container {
     padding: 0;
   }

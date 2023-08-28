@@ -12,7 +12,7 @@ function Education() {
             </div>
             <div className="item_child2">
               <h3>2023</h3>
-              <p>SES college sreekandapuram</p>
+              <p>SES college</p>
               <p>BCA</p>
             </div>
           </div>
@@ -22,7 +22,7 @@ function Education() {
             </div>
             <div className="item_child2">
               <h3>2020</h3>
-              <p>St.Joseph's HSS, Vayattuparamba</p>
+              <p>St.Joseph's HSS</p>
               <p>Computer Science</p>
             </div>
           </div>
@@ -32,7 +32,7 @@ function Education() {
             </div>
             <div className="item_child2">
               <h3>2018</h3>
-              <p>Govt.Technical HS, Naduvil</p>
+              <p>Govt.Technical HS</p>
               <p>THSLC</p>
             </div>
           </div>

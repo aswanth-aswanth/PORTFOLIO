@@ -58,31 +58,35 @@
     font-size: 40px;
     margin-right: 20px;
   }
-  ul{
-    margin-right: 40px;
-    list-style-type: none;
-    width: 32px;
-    // position: absolute;
-    // right: 80px;
-    // top: 30px;
-    li{
-      display: block;
-      border-radius: 20px;
-    }
-    .li1{
-      height: 4px ;
-      width: 100%;
-      // margin:10px 0;
-      background-color: white;
-    }
-    .li2{
-      width: 80%;
-      height: 4px;
-      margin:8px 0;
-      background-color: white;
-      margin-left: 7px;
-    }
+  .menu{
+    font-size: 2.6rem;
+    margin-right: 20px;
   }
+  // ul{
+  //   margin-right: 40px;
+  //   list-style-type: none;
+  //   width: 32px;
+  //   // position: absolute;
+  //   // right: 80px;
+  //   // top: 30px;
+  //   li{
+  //     display: block;
+  //     border-radius: 20px;
+  //   }
+  //   .li1{
+  //     height: 4px ;
+  //     width: 100%;
+  //     // margin:10px 0;
+  //     background-color: white;
+  //   }
+  //   .li2{
+  //     width: 80%;
+  //     height: 4px;
+  //     margin:8px 0;
+  //     background-color: white;
+  //     margin-left: 7px;
+  //   }
+  // }
 }
 .nav{
   padding-top: 20px;

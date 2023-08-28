@@ -1,5 +1,6 @@
 import React from "react";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import MenuIcon from '@mui/icons-material/Menu';
 function Header() {
   return (
     // <div className="header_container">
@@ -13,11 +14,12 @@ function Header() {
           </div>
           <div className="nav-child2">
             <LightModeIcon className="lightmode" />
-            <ul>
+            <MenuIcon className="menu"/>
+            {/* <ul>
               <li className="li1"></li>
               <li className="li2"></li>
               <li className="li1"></li>
-            </ul>
+            </ul> */}
           </div>
         </div>
         <div className="circle1"></div>
