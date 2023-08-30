@@ -10,29 +10,16 @@ body {
   overflow-x: hidden;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
+img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
 
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
   font: inherit;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
@@ -50,9 +37,7 @@ h6 {
   height: 424px;
 }
 
-.header p,
-.header .icons,
-.header .buttons {
+.header p, .header .icons, .header .buttons {
   display: none;
 }
 
@@ -62,7 +47,9 @@ h6 {
   align-items: center;
   color: white;
 }
-
+.selected{
+  background-color: #eee !important;
+}
 .header .nav .icon {
   width: 50px;
   height: 50px;
@@ -83,34 +70,9 @@ h6 {
 
 .header .lightmode {
   color: white;
-  font-size: 40px;
+  font-size: 38px;
   margin-right: 20px;
   cursor: pointer;
-}
-
-.header ul {
-  margin-right: 40px;
-  list-style-type: none;
-  width: 32px;
-}
-
-.header ul li {
-  display: block;
-  border-radius: 20px;
-}
-
-.header ul .li1 {
-  height: 4px;
-  width: 100%;
-  background-color: white;
-}
-
-.header ul .li2 {
-  width: 80%;
-  height: 4px;
-  margin: 8px 0;
-  background-color: white;
-  margin-left: 7px;
 }
 
 .nav {
@@ -145,7 +107,7 @@ h6 {
   border-radius: 48px;
   background-color: rgba(131, 232, 254, 0.7);
   position: absolute;
-  top: -12px;
+  top: -10px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -155,11 +117,6 @@ h6 {
 .circle2 img {
   display: none;
 }
-.nav .nav-child2 .menu{
-  font-size: 50px;
-  margin-right: 10px;
-  cursor: pointer;
-} 
 
 .main {
   max-width: 1046px;
@@ -221,7 +178,6 @@ h6 {
   font-size: 12px;
   padding: 10px 14px;
   border-radius: 10px;
-  cursor: pointer;
 }
 
 .main-child1 {
@@ -237,7 +193,7 @@ h6 {
 }
 
 .main-child3 {
-  color: #008ad8;
+  color: #008AD8;
   text-align: center;
   padding-top: 80px;
 }
@@ -256,7 +212,6 @@ h6 {
   border-radius: 10px;
   overflow: hidden;
   margin: 14px;
-  cursor: pointer;
 }
 
 .main-child3_child .item2 {
@@ -291,7 +246,15 @@ h6 {
   z-index: 49;
   filter: drop-shadow(21px 28px 76px rgba(0, 0, 0, 0.29));
 }
-
+.nav-child2 .menu{
+  font-size: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.nav-child2 .menu{
+  font-size: 40px;
+  cursor: pointer;
+}
 .aboutme .aboutme_container {
   max-width: 1300px;
   height: max-content;
@@ -316,8 +279,6 @@ h6 {
   color: #f3f3f3;
   text-align: center;
   transform: translateY(140px);
-  font: Poppins;
-  font-weight: 400;
   font-size: 18px;
   max-width: 82%;
   margin: 0 auto;
@@ -430,6 +391,12 @@ h6 {
   border-radius: 20px;
   margin: 38px 10px;
   box-shadow: 16px 16px 100px 0px rgba(0, 0, 0, 0.3);
+  /* max-width: 550px;
+  max-height: 360px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 38px 38px;
+  box-shadow: 16px 16px 100px 0px rgba(0, 0, 0, 0.3); */
 }
 
 .project-container .project-items img {
@@ -446,12 +413,7 @@ h6 {
   left: 0;
   right: 0;
   margin: 0 auto;
-  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
-    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-    100px 100px 80px rgba(0, 0, 0, 0.07);
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 
 .education {
@@ -464,7 +426,7 @@ h6 {
   font-weight: 700;
   line-height: 84px;
   letter-spacing: 0em;
-  text-align: center;
+  text-align: left;
   color: #4ac072;
 }
 
@@ -474,7 +436,7 @@ h6 {
 }
 
 .container2::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   bottom: 61px;
@@ -495,13 +457,14 @@ h6 {
   height: 120px;
   margin: 30px auto;
   border-radius: 20px;
+  margin-left: 12px;
   color: white;
   display: flex;
   align-items: center;
 }
 
 .container2 .item::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 150px;
   z-index: -1;
@@ -513,14 +476,14 @@ h6 {
 }
 
 .container2 .item::before {
-  content: "";
+  content: '';
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   border: 5px solid #26f3f6;
   background-color: #26f3f6;
   border-radius: 50%;
-  left: 2px;
+  left: 4px;
   z-index: 60;
 }
 
@@ -568,9 +531,7 @@ h6 {
 .container2 .item_child2 p {
   margin: 8px;
 }
-.item1 .item_child2 h3{
-  text-align: left;
-}
+
 .contact hr {
   max-width: 521px;
   height: 4px;
@@ -579,15 +540,16 @@ h6 {
 }
 
 .contact h3 {
-
-
+  font-size: 73px;
+  font-weight: 400;
+  letter-spacing: 0em;
   text-align: center;
   margin-bottom: 28px;
-  font-size: 44px;
+  font-size: 56px;
   font-weight: 700;
+  line-height: 84px;
+  letter-spacing: 0em;
   color: #2b7dd5;
-  /* line-height: 42px; */
-  margin-bottom: 40px;
 }
 
 .contact-form {
@@ -596,9 +558,7 @@ h6 {
   padding: 0 30px;
 }
 
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
+.contact-form input, .contact-form textarea, .contact-form button {
   display: block;
   width: 100%;
   padding: 22px 0;
@@ -654,6 +614,10 @@ h6 {
     height: max-content;
     padding-bottom: 20px;
   }
+  .header .nav h1{
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
   .header .buttons {
     display: flex;
     justify-content: center;
@@ -667,7 +631,6 @@ h6 {
     color: white;
     margin: 0 10px;
     font-size: 12px;
-    cursor: pointer;
   }
   .header .icons {
     margin-top: 20px;
@@ -707,26 +670,15 @@ h6 {
     margin-bottom: 40px;
     font-weight: 600;
   }
-  .header .nav {
-    padding-top: 10px;
-  }
-  .header .nav h1 {
-    font-size: 12px;
-    letter-spacing: 2px;
-    /* font-weight: 100; */
-  }
   .header .nav .icon {
-    width: 35px;
-    height: 35px;
+    width: 38px;
+    height: 38px;
     border: 2px solid white;
     margin-left: 0;
-    margin-right: 12px;
+    margin-right: 10px;
   }
-  .nav .nav-child2 .menu{
-    font-size: 22px;
-  } 
   .header .nav .nav-child1 {
-    margin-left: 12px;
+    margin-left: 20px;
   }
   .header .circle1 {
     width: 252px;
@@ -742,7 +694,6 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -30px;
   }
   .header .circle2 .circle1_child {
     width: 80%;
@@ -760,25 +711,12 @@ h6 {
     margin-top: 15.6px;
     object-fit: cover;
   }
-  .container2 .item::before{
-    width: 5px;
-    height: 5px;
-    left: 6px;
-  }
-  .container2 .item::after{
-    height: 2px;
-  }
-  /* .container2 .item::after{
-    width: 5px;
-    height: 2px;
-    left: 6px;
-  } */
-  .container2::after{
-    left: 12px;
-    width: 2px;
+  .circle2{
+    top:-32px;
   }
   .container1 .container2 {
     max-width: 440px;
+    padding: 0 28px;
   }
   .container1 .container2 .item {
     height: 68px;
@@ -811,15 +749,18 @@ h6 {
   }
   .education h3 {
     text-align: center;
-    /* font-size: 46px; */
-    font-size: 34px;
+    font-size: 46px;
+  }
+  .header .nav{
+    padding-top: 10px;
   }
   .nav .nav-child2 .lightmode {
     font-size: 28px;
+    margin-right: 10px;
   }
   .nav .nav-child2 .menu {
-    margin-right: 10px;
     font-size: 32px;
+    margin-right: 10px;
   }
   .nav ul {
     width: 30px;
@@ -872,11 +813,12 @@ h6 {
   .aboutmesmall p {
     color: #4d4d4d;
     font-size: 16px;
+    font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.03em;
     max-width: 440px;
     margin: 0 auto;
-    /* text-indent: 60px; */
+    text-indent: 60px;
     padding: 0 20px;
     text-align: justify;
   }
@@ -902,17 +844,11 @@ h6 {
   }
   .aboutmesmall_skills .child1 button {
     background-color: transparent;
-    /* margin: 0 10px; */
     color: #3c3c3c;
-    /* width: 79.7682113647461px; */
-    /* width: 130px; */
-    width: 120px;
-    /* height: 26.22516632080078px; */
+    width: 100%;
     height: 46px;
     border-radius: 3px;
-    /* border: 1px solid #3c3c3c; */
-    /* border: 1px solid #e5e2e2; */
-    border:0;
+    border: 1px solid #f0f0f0;
   }
   .aboutmesmall_skills .child1 .frontend_btn::before{
     content: "🎉";
@@ -922,9 +858,6 @@ h6 {
   }
   .aboutmesmall_skills .child1 .all_btn::before{
     content: "✌️";
-  }
-  .selected{
-    background-color: #eee;
   }
   .aboutmesmall_skills .child2 {
     padding-top: 20px;
@@ -964,6 +897,10 @@ h6 {
     padding: 0;
     border-radius: 6px;
     font-size: 12px;
+    /* width: 60%;
+    padding: 0;
+    border-radius: 6px;
+    font-size: 24px; */
   }
   .project-container .project-items img {
     border-radius: 10px;

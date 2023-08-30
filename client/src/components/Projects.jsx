@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-
 function Projects() {
   const projectlist = [
     { id: 1, name: "PROJECT MANAGEMENT", url: "project.png" },
@@ -13,27 +12,21 @@ function Projects() {
       <h3>Projects</h3>
       <div className="project-container">
         {projectlist.map((item) => (
-          <motion.div
-            initial={{
-              y: -100,
-              opacity: 0,
-            }}
-            whileInView={{
-              y: 0,
-              opacity: 1,
-            }}
-            transition={{ delay: 0.3 }}
-            key={item.id}
-            className="project-container2"
-          >
+          <div key={item.id} className="project-container2">
             <div className="project-items">
               <img src={`/assets/projects/${item.url}`} alt="" />
               <button>{item.name}</button>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
-      <button>Load more</button>
+      <motion.button
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      >
+        Load more
+      </motion.button>
     </div>
   );
 }

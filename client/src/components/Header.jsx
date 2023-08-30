@@ -22,15 +22,15 @@ function Header() {
       <div className="circle2">
         <motion.div
           whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
           initial={{
             y: -40,
           }}
-          whileTap={{ scale: 0.9 }}
           whileInView={{
             y: 0,
           }}
           transition={{
-            delay:0.1,
+            delay: 0.1,
             type: "spring",
             stiffness: 400,
             damping: 17,
@@ -130,9 +130,9 @@ function Header() {
         />
       </div>
       <motion.div
-        initial={{ x: 100, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.2 }}
+        initial={{ y: -100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.4 }}
         className="buttons"
       >
         <motion.button

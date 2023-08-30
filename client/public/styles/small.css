@@ -1,6 +1,7 @@
 @media only screen and (max-width: 720px) {
   .header {
     border-radius: 0;
+    max-width: 100%;
     filter: drop-shadow(9px 23px 51px transparent);
     min-height: 100vh;
     height: max-content;

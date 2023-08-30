@@ -17,7 +17,8 @@ function Contact() {
           delay: 0.2,
           type: "spring",
           // stiffness:20
-          stiffness: 400, damping: 17 
+          stiffness: 400,
+          damping: 17,
         }}
         className="contact-form"
       >
@@ -32,10 +33,10 @@ function Contact() {
           rows="10"
         ></textarea>
         <motion.button
-          whileHover={{ scale: 1.2 }}
+          whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          onClick={(e)=>e.preventDefault()}
+          onClick={(e) => e.preventDefault()}
         >
           Submit
         </motion.button>
