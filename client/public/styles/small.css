@@ -1,6 +1,7 @@
 @media only screen and (max-width: 720px) {
   .header {
     border-radius: 0;
+    max-width: 100%;
     filter: drop-shadow(9px 23px 51px transparent);
     min-height: 100vh;
     height: max-content;
@@ -58,14 +59,23 @@
     margin-bottom: 40px;
     font-weight: 600;
   }
+  .header .nav {
+    padding-top: 0px;
+  }
   .header .nav .icon {
     width: 40px;
     height: 40px;
     border: 2px solid white;
-    margin-left: 0;
+    margin-left: 14px;
+    margin-right: 8px;
+  }
+  .header .nav h1 {
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 2px;
   }
   .header .nav .nav-child1 {
-    margin-left: 20px;
+    margin-left: 0px;
   }
   .header .circle1 {
     width: 252px;
@@ -77,6 +87,7 @@
     width: 208px;
     height: 241px;
     border-radius: 38px;
+    top: -34px;
     z-index: 30;
     display: flex;
     justify-content: center;
@@ -135,24 +146,7 @@
     font-size: 46px;
   }
   .nav .nav-child2 .lightmode {
-    font-size: 32px;
-  }
-  .nav ul {
-    width: 30px;
-    margin-right: 20px;
-  }
-  .nav ul .li1 {
-    height: 4px;
-    width: 100%;
-    margin: 8px 0;
-    background-color: white;
-  }
-  .nav ul .li2 {
-    width: 80%;
-    height: 4px;
-    margin: 6px 0;
-    background-color: white;
-    margin-left: 7px;
+    font-size: 28px;
   }
   .main {
     display: none;
@@ -263,47 +257,9 @@
     width: 60%;
     padding: 0;
     border-radius: 6px;
-    font-size: 24px;
+    font-size: 12px;
   }
   .project-container .project-items img {
     border-radius: 10px;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .aboutme_container {
-    padding: 0;
-  }
-  .header_container {
-    padding: 0;
-  }
-  .nav .nav-child1 {
-    margin-left: 0px;
-  }
-  .nav .nav-child2 {
-    margin-right: 0px;
-  }
-  .header {
-    border-radius: 0;
-    max-width: 100%;
-  }
-  .main {
-    border-radius: 20px;
-    margin: 0 14px;
-  }
-  .aboutme .longbar {
-    border-radius: 0;
-  }
-  .aboutme .aboutbottomdiv {
-    margin: 0 90px;
-  }
-  .skills {
-    margin: 0 40px;
-    margin-top: 160px;
-  }
-  .skills .skills_parent .skill_child {
-    margin: 44px;
-    width: 70px;
-    height: 60px;
   }
 }

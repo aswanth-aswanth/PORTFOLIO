@@ -1,8 +1,21 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 function Education() {
   return (
-    <div className="education">
+    <motion.div
+      initial={{
+        x: -200,
+        opacity: 0,
+      }}
+      whileInView={{
+        x: 0,
+        opacity: 1,
+      }}
+      transition={{
+        delay: 0.2,
+      }}
+      className="education"
+    >
       <h3>Education</h3>
       <div className="container1">
         <div className="container2">
@@ -12,7 +25,7 @@ function Education() {
             </div>
             <div className="item_child2">
               <h3>2023</h3>
-              <p>SES college sreekandapuram</p>
+              <p>SES college</p>
               <p>BCA</p>
             </div>
           </div>
@@ -22,7 +35,7 @@ function Education() {
             </div>
             <div className="item_child2">
               <h3>2020</h3>
-              <p>St.Joseph's HSS, Vayattuparamba</p>
+              <p>St.Joseph's HSS</p>
               <p>Computer Science</p>
             </div>
           </div>
@@ -32,13 +45,13 @@ function Education() {
             </div>
             <div className="item_child2">
               <h3>2018</h3>
-              <p>Govt.Technical HS, Naduvil</p>
+              <p>Govt.Technical HS</p>
               <p>THSLC</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

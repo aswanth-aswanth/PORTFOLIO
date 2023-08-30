@@ -1,11 +1,11 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 function Projects() {
   const projectlist = [
-    { id: 1, name: "PROJECT MANAGEMENT", url: "project.png" },
-    { id: 2, name: "TASK MANAGEMENT", url: "Frame1.jpg" },
-    { id: 3, name: "BLOG APP", url: "Desktop1.jpg" },
-    { id: 4, name: "BLOG APP", url: "Desktop1.jpg" },
+    { id: 1, name: "PROJECT MANAGEMENT", url: "project-management.png" },
+    { id: 2, name: "TASK MANAGEMENT", url: "task-app.png" },
+    { id: 3, name: "BLOG APP", url: "blog-app.png" },
+    { id: 4, name: "CHAT APP", url: "chatapp.png" },
   ];
   return (
     <div className="projects">
@@ -19,33 +19,14 @@ function Projects() {
             </div>
           </div>
         ))}
-        {/* <div className="project-container2">
-          <div className="project-items">
-            <img src="/assets/projects/Frame1.jpg" alt="" />
-            <button>button</button>
-          </div>
-        </div>
-        <div className="project-container2">
-          <div className="project-items">
-            <img src="/assets/projects/Desktop1.jpg" alt="" />
-            <button>button</button>
-          </div>
-        </div>
-        <div className="project-container2">
-          <div className="project-items">
-            <img src="/assets/projects/Desktop1.jpg" alt="" />
-            <button>button</button>
-          </div>
-        </div> */}
-        {/* <div className="project-container2">
-          <div className="project-items">
-            <img src="" alt="" />
-            <button>button</button>
-          </div>
-          <div className="project-container2"></div>
-        </div> */}
       </div>
-      <button>Load more</button>
+      <motion.button
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      >
+        Load more
+      </motion.button>
     </div>
   );
 }

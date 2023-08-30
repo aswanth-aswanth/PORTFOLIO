@@ -47,7 +47,9 @@ p, h1, h2, h3, h4, h5, h6 {
   align-items: center;
   color: white;
 }
-
+.selected{
+  background-color: #eee !important;
+}
 .header .nav .icon {
   width: 50px;
   height: 50px;
@@ -68,33 +70,9 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .header .lightmode {
   color: white;
-  font-size: 40px;
+  font-size: 38px;
   margin-right: 20px;
-}
-
-.header ul {
-  margin-right: 40px;
-  list-style-type: none;
-  width: 32px;
-}
-
-.header ul li {
-  display: block;
-  border-radius: 20px;
-}
-
-.header ul .li1 {
-  height: 4px;
-  width: 100%;
-  background-color: white;
-}
-
-.header ul .li2 {
-  width: 80%;
-  height: 4px;
-  margin: 8px 0;
-  background-color: white;
-  margin-left: 7px;
+  cursor: pointer;
 }
 
 .nav {
@@ -129,7 +107,7 @@ p, h1, h2, h3, h4, h5, h6 {
   border-radius: 48px;
   background-color: rgba(131, 232, 254, 0.7);
   position: absolute;
-  top: -12px;
+  top: -10px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -268,7 +246,15 @@ p, h1, h2, h3, h4, h5, h6 {
   z-index: 49;
   filter: drop-shadow(21px 28px 76px rgba(0, 0, 0, 0.29));
 }
-
+.nav-child2 .menu{
+  font-size: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.nav-child2 .menu{
+  font-size: 40px;
+  cursor: pointer;
+}
 .aboutme .aboutme_container {
   max-width: 1300px;
   height: max-content;
@@ -293,9 +279,7 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #f3f3f3;
   text-align: center;
   transform: translateY(140px);
-  font: Poppins;
-  font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   max-width: 82%;
   margin: 0 auto;
   line-height: 33px;
@@ -405,8 +389,14 @@ p, h1, h2, h3, h4, h5, h6 {
   max-height: 360px;
   overflow: hidden;
   border-radius: 20px;
-  margin: 38px 38px;
+  margin: 38px 10px;
   box-shadow: 16px 16px 100px 0px rgba(0, 0, 0, 0.3);
+  /* max-width: 550px;
+  max-height: 360px;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 38px 38px;
+  box-shadow: 16px 16px 100px 0px rgba(0, 0, 0, 0.3); */
 }
 
 .project-container .project-items img {
@@ -467,6 +457,7 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 120px;
   margin: 30px auto;
   border-radius: 20px;
+  margin-left: 12px;
   color: white;
   display: flex;
   align-items: center;
@@ -487,12 +478,12 @@ p, h1, h2, h3, h4, h5, h6 {
 .container2 .item::before {
   content: '';
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   border: 5px solid #26f3f6;
   background-color: #26f3f6;
   border-radius: 50%;
-  left: 2px;
+  left: 4px;
   z-index: 60;
 }
 
@@ -623,6 +614,10 @@ p, h1, h2, h3, h4, h5, h6 {
     height: max-content;
     padding-bottom: 20px;
   }
+  .header .nav h1{
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
   .header .buttons {
     display: flex;
     justify-content: center;
@@ -676,10 +671,11 @@ p, h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
   }
   .header .nav .icon {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     border: 2px solid white;
     margin-left: 0;
+    margin-right: 10px;
   }
   .header .nav .nav-child1 {
     margin-left: 20px;
@@ -715,8 +711,12 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-top: 15.6px;
     object-fit: cover;
   }
+  .circle2{
+    top:-32px;
+  }
   .container1 .container2 {
     max-width: 440px;
+    padding: 0 28px;
   }
   .container1 .container2 .item {
     height: 68px;
@@ -751,8 +751,16 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-size: 46px;
   }
+  .header .nav{
+    padding-top: 10px;
+  }
   .nav .nav-child2 .lightmode {
+    font-size: 28px;
+    margin-right: 10px;
+  }
+  .nav .nav-child2 .menu {
     font-size: 32px;
+    margin-right: 10px;
   }
   .nav ul {
     width: 30px;
@@ -836,12 +844,20 @@ p, h1, h2, h3, h4, h5, h6 {
   }
   .aboutmesmall_skills .child1 button {
     background-color: transparent;
-    margin: 0 10px;
     color: #3c3c3c;
-    width: 79.7682113647461px;
-    height: 26.22516632080078px;
+    width: 100%;
+    height: 46px;
     border-radius: 3px;
-    border: 1px solid #3c3c3c;
+    border: 1px solid #f0f0f0;
+  }
+  .aboutmesmall_skills .child1 .frontend_btn::before{
+    content: "🎉";
+  }
+  .aboutmesmall_skills .child1 .backend_btn::before{
+    content: "🎊";
+  }
+  .aboutmesmall_skills .child1 .all_btn::before{
+    content: "✌️";
   }
   .aboutmesmall_skills .child2 {
     padding-top: 20px;
@@ -880,7 +896,11 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 60%;
     padding: 0;
     border-radius: 6px;
-    font-size: 24px;
+    font-size: 12px;
+    /* width: 60%;
+    padding: 0;
+    border-radius: 6px;
+    font-size: 24px; */
   }
   .project-container .project-items img {
     border-radius: 10px;
