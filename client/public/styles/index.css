@@ -85,6 +85,7 @@ h6 {
   color: white;
   font-size: 40px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .header ul {
@@ -157,6 +158,7 @@ h6 {
 .nav .nav-child2 .menu{
   font-size: 50px;
   margin-right: 10px;
+  cursor: pointer;
 } 
 
 .main {
@@ -219,6 +221,7 @@ h6 {
   font-size: 12px;
   padding: 10px 14px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .main-child1 {
@@ -253,6 +256,7 @@ h6 {
   border-radius: 10px;
   overflow: hidden;
   margin: 14px;
+  cursor: pointer;
 }
 
 .main-child3_child .item2 {
@@ -314,7 +318,7 @@ h6 {
   transform: translateY(140px);
   font: Poppins;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 18px;
   max-width: 82%;
   margin: 0 auto;
   line-height: 33px;
@@ -460,7 +464,7 @@ h6 {
   font-weight: 700;
   line-height: 84px;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: center;
   color: #4ac072;
 }
 
@@ -564,7 +568,9 @@ h6 {
 .container2 .item_child2 p {
   margin: 8px;
 }
-
+.item1 .item_child2 h3{
+  text-align: left;
+}
 .contact hr {
   max-width: 521px;
   height: 4px;
@@ -661,6 +667,7 @@ h6 {
     color: white;
     margin: 0 10px;
     font-size: 12px;
+    cursor: pointer;
   }
   .header .icons {
     margin-top: 20px;
@@ -701,16 +708,16 @@ h6 {
     font-weight: 600;
   }
   .header .nav {
-    padding-top: 0;
+    padding-top: 10px;
   }
   .header .nav h1 {
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 2px;
-    font-weight: 100;
+    /* font-weight: 100; */
   }
   .header .nav .icon {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border: 2px solid white;
     margin-left: 0;
     margin-right: 12px;
@@ -735,7 +742,7 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -40px;
+    top: -30px;
   }
   .header .circle2 .circle1_child {
     width: 80%;
@@ -752,6 +759,23 @@ h6 {
     height: 92%;
     margin-top: 15.6px;
     object-fit: cover;
+  }
+  .container2 .item::before{
+    width: 5px;
+    height: 5px;
+    left: 6px;
+  }
+  .container2 .item::after{
+    height: 2px;
+  }
+  /* .container2 .item::after{
+    width: 5px;
+    height: 2px;
+    left: 6px;
+  } */
+  .container2::after{
+    left: 12px;
+    width: 2px;
   }
   .container1 .container2 {
     max-width: 440px;
@@ -791,10 +815,11 @@ h6 {
     font-size: 34px;
   }
   .nav .nav-child2 .lightmode {
-    font-size: 22px;
+    font-size: 28px;
   }
   .nav .nav-child2 .menu {
     margin-right: 10px;
+    font-size: 32px;
   }
   .nav ul {
     width: 30px;
@@ -847,12 +872,11 @@ h6 {
   .aboutmesmall p {
     color: #4d4d4d;
     font-size: 16px;
-    font-weight: 400;
     line-height: 30px;
     letter-spacing: 0.03em;
     max-width: 440px;
     margin: 0 auto;
-    text-indent: 60px;
+    /* text-indent: 60px; */
     padding: 0 20px;
     text-align: justify;
   }
@@ -878,12 +902,29 @@ h6 {
   }
   .aboutmesmall_skills .child1 button {
     background-color: transparent;
-    margin: 0 10px;
+    /* margin: 0 10px; */
     color: #3c3c3c;
-    width: 79.7682113647461px;
-    height: 26.22516632080078px;
+    /* width: 79.7682113647461px; */
+    /* width: 130px; */
+    width: 120px;
+    /* height: 26.22516632080078px; */
+    height: 46px;
     border-radius: 3px;
-    border: 1px solid #3c3c3c;
+    /* border: 1px solid #3c3c3c; */
+    /* border: 1px solid #e5e2e2; */
+    border:0;
+  }
+  .aboutmesmall_skills .child1 .frontend_btn::before{
+    content: "🎉";
+  }
+  .aboutmesmall_skills .child1 .backend_btn::before{
+    content: "🎊";
+  }
+  .aboutmesmall_skills .child1 .all_btn::before{
+    content: "✌️";
+  }
+  .selected{
+    background-color: #eee;
   }
   .aboutmesmall_skills .child2 {
     padding-top: 20px;

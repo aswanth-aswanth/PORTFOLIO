@@ -1,8 +1,21 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 function Education() {
   return (
-    <div className="education">
+    <motion.div
+      initial={{
+        x: -200,
+        opacity: 0,
+      }}
+      whileInView={{
+        x: 0,
+        opacity: 1,
+      }}
+      transition={{
+        delay: 0.2,
+      }}
+      className="education"
+    >
       <h3>Education</h3>
       <div className="container1">
         <div className="container2">
@@ -38,7 +51,7 @@ function Education() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
