@@ -42,7 +42,7 @@ function Header() {
       </div>
       <motion.p
         initial={{
-          y: -100,
+          y: -50,
           opacity: 0,
         }}
         whileInView={{
@@ -55,7 +55,7 @@ function Header() {
       </motion.p>
       <motion.p
         initial={{
-          y: -200,
+          y: -50,
           opacity: 0,
         }}
         whileInView={{
@@ -113,7 +113,7 @@ function Header() {
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
           initial={{
-            x: -100,
+            x: -50,
             opacity: 0,
           }}
           whileInView={{
@@ -130,7 +130,7 @@ function Header() {
         />
       </div>
       <motion.div
-        initial={{ y: -100, opacity: 0 }}
+        initial={{ y: -50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4 }}
         className="buttons"

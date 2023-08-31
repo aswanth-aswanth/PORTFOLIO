@@ -70,19 +70,20 @@ function Aboutme() {
         <div className="aboutme">
           <div className="longbar"></div>
           <div className="aboutbottomdiv"></div>
-          <motion.div
-            initial={{
-              y: -200,
-              opacity: 0,
-            }}
-            whileInView={{
-              y: 80,
-              opacity: 1,
-            }}
+          <div
+           
             className="aboutme_container"
           >
-            <h3>About me</h3>
-            <p>
+            <motion.h3>About me</motion.h3>
+            <motion.p initial={{
+              y:-10,
+              // opacity:0
+            }}
+            whileInView={{
+              y:140,
+              opacity:1
+            }}
+            >
               I’m a self-motivated, independent & skilled MERN stack developer.
               I’m constantly learning & staying up to date with the latest
               trends in web development. I excel in front-end technologies like
@@ -90,13 +91,13 @@ function Aboutme() {
               like Node.js, express js & MongoDB. Let’s build amazing together.
               Feel free to explore my portfolio & reach out for collaboration or
               any questions.
-            </p>
-          </motion.div>
+            </motion.p>
+          </div>
         </div>
         <div className="aboutmesmall">
           <motion.h3
             initial={{
-              y: 100,
+              y: 50,
               opacity: 0,
             }}
             whileInView={{
@@ -112,14 +113,14 @@ function Aboutme() {
           </motion.h3>
           <motion.p
             initial={{
-              y: 100,
+              // y: 100,
               opacity: 0,
-              scale: 0.5,
+              // scale: 0.5,
             }}
             whileInView={{
-              y: 0,
+              // y: 0,
               opacity: 1,
-              scale: 1,
+              // scale: 1,
             }}
             transition={{
               delay: 0.2,
@@ -154,7 +155,7 @@ function Aboutme() {
               <motion.div
                 initial={{
                   // x: -100,
-                  scale:0.4,
+                  scale:0.7,
                   opacity: 0,
                 }}
                 whileInView={{

@@ -4,7 +4,7 @@ function Education() {
   return (
     <motion.div
       initial={{
-        x: -200,
+        x: -50,
         opacity: 0,
       }}
       whileInView={{

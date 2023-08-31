@@ -6,7 +6,7 @@ function Contact() {
       <hr />
       <motion.form
         initial={{
-          x: -200,
+          x: -50,
           opacity: 0,
         }}
         whileInView={{
