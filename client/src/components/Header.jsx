@@ -90,10 +90,9 @@ function Header() {
           }}
           viewport={{ amount: "all", margin: "-100px" }}
           transition={{
-            delay: 0.5,
-            type: "spring",
-            stiffness: 400,
-            damping: 16,
+            opacity: { delay: 0.5 },
+            x: { delay: 0.5, type: "spring", stiffness: 400, damping: 17 },
+            scale: { type: "spring", stiffness: 400, damping: 17 }, // No delay for scale
           }}
           src="/assets/Social_icons/instagram-tile.svg"
           alt=""
@@ -111,10 +110,9 @@ function Header() {
           }}
           viewport={{ amount: "all", margin: "-100px" }}
           transition={{
-            delay: 0.5,
-            type: "spring",
-            stiffness: 400,
-            damping: 17,
+            opacity: { delay: 0.5 },
+            x: { delay: 0.5, type: "spring", stiffness: 400, damping: 17 },
+            scale: { type: "spring", stiffness: 400, damping: 17 }, // No delay for scale
           }}
           src="/assets/Social_icons/github.svg"
           alt=""
@@ -132,10 +130,9 @@ function Header() {
           }}
           viewport={{ amount: "all", margin: "-100px" }}
           transition={{
-            delay: 0.5,
-            type: "spring",
-            stiffness: 400,
-            damping: 17,
+            opacity: { delay: 0.5 },
+            x: { delay: 0.5, type: "spring", stiffness: 400, damping: 17 },
+            scale: { type: "spring", stiffness: 400, damping: 17 }, // No delay for scale
           }}
           src="/assets/Social_icons/linkedin.svg"
           alt=""
@@ -144,8 +141,8 @@ function Header() {
       <motion.div
         initial={{ y: -50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.2 }}
-        viewport={{ amount: "all", margin: "0px 0px -200px 0px" }}
+        transition={{ delay: 0.4 }}
+        viewport={{ amount: "all" }}
         className="buttons"
       >
         <motion.button
