@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 function Projects() {
   const projectlist = [
-    { id: 1, name: "PROJECT MANAGEMENT", url: "project-management.png" },
-    { id: 2, name: "TASK MANAGEMENT", url: "task-app.png" },
-    { id: 3, name: "BLOG APP", url: "blog-app.png" },
-    { id: 4, name: "CHAT APP", url: "chatapp.png" },
+    { id: 1, name: "PROJECT MANAGEMENT", url: "project-management.webp" },
+    { id: 2, name: "TASK MANAGEMENT", url: "task-app.webp" },
+    { id: 3, name: "BLOG APP", url: "blog-app.webp" },
+    { id: 4, name: "CHAT APP", url: "chatapp.webp" },
   ];
   return (
     <div className="projects">

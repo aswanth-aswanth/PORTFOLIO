@@ -9,7 +9,7 @@ function Header() {
       <div className="nav">
         <div className="nav-child1">
           <div className="icon">
-            <img src="/assets/profile-pic2.png" alt="" />
+            <img src="/assets/profile-pic22.webp" alt="" />
           </div>
           <h1>Aswanth</h1>
         </div>
@@ -37,7 +37,7 @@ function Header() {
           }}
           className="circle1_child"
         >
-          <img src="/assets/profile-pic (9).png" alt="" />
+          <img src="/assets/profile-pic (9).webp" alt="" />
         </motion.div>
       </div>
       <motion.p

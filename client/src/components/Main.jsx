@@ -76,7 +76,7 @@ function Main() {
        
         className="main-child main-child2"
       >
-        <img src="/assets/profile-pic1.png" alt="" />
+        <img src="/assets/profile-pic1.webp" alt="" />
       </motion.div>
       <div className="main-child main-child3">
         <motion.p initial={{
