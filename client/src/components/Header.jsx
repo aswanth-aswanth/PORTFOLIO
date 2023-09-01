@@ -30,10 +30,10 @@ function Header() {
             y: 0,
           }}
           transition={{
-            delay: 0.1,
+            delay: 0.2,
             type: "spring",
             stiffness: 400,
-            damping: 17,
+            damping: 14,
           }}
           className="circle1_child"
         >
@@ -48,6 +48,12 @@ function Header() {
         whileInView={{
           y: 0,
           opacity: 1,
+        }}
+        transition={{
+          delay:0.4,
+          type:"spring",
+          stiffness:400,
+          // damping:8
         }}
         className="p1"
       >
@@ -83,9 +89,10 @@ function Header() {
             opacity: 1,
           }}
           transition={{
+            delay: 0.5,
             type: "spring",
             stiffness: 400,
-            damping: 17,
+            damping: 16,
           }}
           src="/assets/Social_icons/instagram-tile.svg"
           alt=""
@@ -102,6 +109,7 @@ function Header() {
             opacity: 1,
           }}
           transition={{
+            delay: 0.5,
             type: "spring",
             stiffness: 400,
             damping: 17,
@@ -121,6 +129,7 @@ function Header() {
             opacity: 1,
           }}
           transition={{
+            delay: 0.5,
             type: "spring",
             stiffness: 400,
             damping: 17,
@@ -132,7 +141,7 @@ function Header() {
       <motion.div
         initial={{ y: -50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.4 }}
+        transition={{ delay: 0.6 }}
         className="buttons"
       >
         <motion.button

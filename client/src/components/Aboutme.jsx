@@ -124,6 +124,7 @@ function Aboutme() {
             }}
             transition={{
               delay: 0.2,
+              duration:0.4
             }}
           >
             I’m a self-motivated, independent & skilled MERN stack developer.
