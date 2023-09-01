@@ -70,19 +70,17 @@ function Aboutme() {
         <div className="aboutme">
           <div className="longbar"></div>
           <div className="aboutbottomdiv"></div>
-          <div
-           
-            className="aboutme_container"
-          >
+          <div className="aboutme_container">
             <motion.h3>About me</motion.h3>
-            <motion.p initial={{
-              y:-10,
-              // opacity:0
-            }}
-            whileInView={{
-              y:140,
-              opacity:1
-            }}
+            <motion.p
+              initial={{
+                y: -10,
+                // opacity:0
+              }}
+              whileInView={{
+                y: 140,
+                opacity: 1,
+              }}
             >
               I’m a self-motivated, independent & skilled MERN stack developer.
               I’m constantly learning & staying up to date with the latest
@@ -124,7 +122,7 @@ function Aboutme() {
             }}
             transition={{
               delay: 0.2,
-              duration:0.4
+              duration: 0.4,
             }}
           >
             I’m a self-motivated, independent & skilled MERN stack developer.
@@ -141,13 +139,17 @@ function Aboutme() {
               <div className="child1">
                 <button
                   onClick={() => setSkills({ selected: 1, data: frontend })}
-                  className={`frontend_btn  ${skills.selected==1 && "selected"}`}
+                  className={`frontend_btn  ${
+                    skills.selected == 1 && "selected"
+                  }`}
                 >
                   Frontend
                 </button>
                 <button
                   onClick={() => setSkills({ selected: 2, data: backend })}
-                  className={`backend_btn ${skills.selected ==2&& "selected"}`}
+                  className={`backend_btn ${
+                    skills.selected == 2 && "selected"
+                  }`}
                 >
                   Backend
                 </button>
@@ -156,16 +158,16 @@ function Aboutme() {
               <motion.div
                 initial={{
                   // x: -100,
-                  scale:0.7,
+                  scale: 0.7,
                   opacity: 0,
                 }}
                 whileInView={{
                   x: 0,
-                  scale:1,
+                  scale: 1,
                   opacity: 1,
                 }}
                 transition={{
-                  delay:0.3
+                  delay: 0.3,
                 }}
                 className="child2"
               >

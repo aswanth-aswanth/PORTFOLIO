@@ -4,7 +4,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { motion } from "framer-motion";
 function Header() {
   return (
-    // <div className="header_container">
     <div className="header">
       <div className="nav">
         <div className="nav-child1">
@@ -29,6 +28,7 @@ function Header() {
           whileInView={{
             y: 0,
           }}
+          viewport={{ amount: "all" }}
           transition={{
             delay: 0.2,
             type: "spring",
@@ -50,9 +50,9 @@ function Header() {
           opacity: 1,
         }}
         transition={{
-          delay:0.4,
-          type:"spring",
-          stiffness:400,
+          delay: 0.4,
+          type: "spring",
+          stiffness: 400,
           // damping:8
         }}
         className="p1"
@@ -88,6 +88,7 @@ function Header() {
             x: 0,
             opacity: 1,
           }}
+          viewport={{ amount: "all", margin: "-100px" }}
           transition={{
             delay: 0.5,
             type: "spring",
@@ -108,6 +109,7 @@ function Header() {
             x: 0,
             opacity: 1,
           }}
+          viewport={{ amount: "all", margin: "-100px" }}
           transition={{
             delay: 0.5,
             type: "spring",
@@ -128,6 +130,7 @@ function Header() {
             x: 0,
             opacity: 1,
           }}
+          viewport={{ amount: "all", margin: "-100px" }}
           transition={{
             delay: 0.5,
             type: "spring",
@@ -141,7 +144,8 @@ function Header() {
       <motion.div
         initial={{ y: -50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.6 }}
+        transition={{ delay: 0.2 }}
+        viewport={{ amount: "all", margin: "0px 0px -200px 0px" }}
         className="buttons"
       >
         <motion.button
@@ -160,7 +164,6 @@ function Header() {
         </motion.button>
       </motion.div>
     </div>
-    // </div>
   );
 }
 
