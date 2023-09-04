@@ -137,7 +137,7 @@ function Header() {
             alt=""
           />
         </a>
-        <a href="www.linkedin.com/in/aswanth-t-5525801ba">
+        <a href="https://www.linkedin.com/in/aswanth-t-5525801ba">
           <motion.img
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}

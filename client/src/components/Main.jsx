@@ -11,7 +11,7 @@ function Main() {
     {
       id: 3,
       account: "linkedin.svg",
-      link: "www.linkedin.com/in/aswanth-t-5525801ba",
+      link: "https://www.linkedin.com/in/aswanth-t-5525801ba/",
     },
     { id: 4, account: "fb.svg" ,link:" "},
   ];
