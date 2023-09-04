@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useStore } from "../store/store";
+
 function Skills() {
+  const darkMode = useStore((state) => state.darkMode);
   const IMG_URL = [
     { id: 1, tech: "HTML5.svg", name: "HTML" },
     { id: 2, tech: "CSS3.svg", name: "CSS" },
@@ -15,9 +18,12 @@ function Skills() {
     { id: 11, tech: "github.svg", name: "GITHUB" },
     { id: 12, tech: "nodejs.svg", name: "NODEJS" },
   ];
+  const whitetext = {
+    color: "white",
+  };
   return (
-    <div className="skills">
-      <h3>SKILLS</h3>
+    <div className={`skills ${darkMode ? "dark1" : null}`}>
+      <h3 style={darkMode ? whitetext : null}>SKILLS</h3>
       <div className="skills_parent">
         {IMG_URL.map((item) => (
           <motion.div
@@ -30,13 +36,13 @@ function Skills() {
               opacity: 1,
             }}
             transition={{
-              delay:0.2
+              delay: 0.2,
             }}
             key={item.id}
             className="skill_child"
           >
             <img src={`/assets/skills/${item.tech}`} alt="" />{" "}
-            <p>{item.name}</p>
+            <p style={darkMode ? whitetext : null}>{item.name}</p>
           </motion.div>
         ))}
       </div>

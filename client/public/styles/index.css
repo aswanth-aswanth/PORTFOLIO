@@ -10,16 +10,29 @@ body {
   overflow-x: hidden;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -35,9 +48,12 @@ p, h1, h2, h3, h4, h5, h6 {
   filter: drop-shadow(9px 23px 51px rgba(0, 0, 0, 0.38));
   max-width: 90%;
   height: 424px;
+  position: relative;
 }
 
-.header p, .header .icons, .header .buttons {
+.header p,
+.header .icons,
+.header .buttons {
   display: none;
 }
 
@@ -47,8 +63,10 @@ p, h1, h2, h3, h4, h5, h6 {
   align-items: center;
   color: white;
 }
-.selected{
+
+.selected {
   background-color: #eee !important;
+  color: black!important;
 }
 .header .nav .icon {
   width: 50px;
@@ -73,6 +91,33 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 38px;
   margin-right: 20px;
   cursor: pointer;
+}
+/* nav dropdown */
+.header .x{
+z-index: 999;
+position: absolute;
+top: 10px;
+right: 20px;
+}
+.x p{
+  color: white;
+
+}
+.header ul{
+  top: 70px;
+  right: 44px;
+  color: white;
+  text-align: right;
+  position: absolute;
+  list-style-type: none;
+  z-index: 999 !important;
+}
+.header ul li{
+  padding: 8px 4px;
+  cursor: pointer;
+}
+.header ul li:hover{
+  background-color: #29abe2;
 }
 
 .nav {
@@ -145,7 +190,6 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 38px;
   font-weight: 400;
   line-height: 48px;
-  letter-spacing: 0em;
   text-align: left;
   color: #ff00e5bd;
   margin-top: 80px;
@@ -193,7 +237,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .main-child3 {
-  color: #008AD8;
+  color: #008ad8;
   text-align: center;
   padding-top: 80px;
 }
@@ -222,6 +266,24 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0 30px;
 }
 
+.nav-child2 ul {
+  position: absolute;
+  top: 80px;
+  text-align: right;
+  list-style-type: none;
+}
+.nav-child2 ul li {
+  position: relative;
+  z-index: 999;
+  font-size: 20px;
+  padding: 8px 8px;
+
+  border-radius: 10px;
+  cursor: pointer;
+}
+.nav-child2 ul li:hover {
+  background-color: #2b7dd5;
+}
 .aboutme .longbar {
   max-width: 1411px;
   height: 105px;
@@ -246,15 +308,16 @@ p, h1, h2, h3, h4, h5, h6 {
   z-index: 49;
   filter: drop-shadow(21px 28px 76px rgba(0, 0, 0, 0.29));
 }
-.nav-child2 .menu{
+.nav-child2 .menu {
   font-size: 40px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 20px;
 }
-.nav-child2 .menu{
+.nav-child2 .menu {
   font-size: 40px;
   cursor: pointer;
 }
+
 .aboutme .aboutme_container {
   max-width: 1300px;
   height: max-content;
@@ -413,7 +476,12 @@ p, h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   margin: 0 auto;
-  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 
 .education {
@@ -436,7 +504,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .container2::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 61px;
@@ -464,7 +532,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .container2 .item::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 150px;
   z-index: -1;
@@ -476,7 +544,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .container2 .item::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 6px;
   height: 6px;
@@ -558,7 +626,9 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0 30px;
 }
 
-.contact-form input, .contact-form textarea, .contact-form button {
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
   display: block;
   width: 100%;
   padding: 22px 0;
@@ -570,11 +640,12 @@ p, h1, h2, h3, h4, h5, h6 {
 .contact-form input {
   padding-left: 10px;
   border-radius: 10px;
+  margin:12px 0;
 }
 
 .contact-form textarea {
   border: 1px solid gray;
-  margin-top: 72px;
+  margin-top: 12px;
   border-radius: 10px;
   padding-left: 10px;
 }
@@ -614,7 +685,7 @@ p, h1, h2, h3, h4, h5, h6 {
     height: max-content;
     padding-bottom: 20px;
   }
-  .header .nav h1{
+  .header .nav h1 {
     font-size: 12px;
     letter-spacing: 2px;
   }
@@ -711,8 +782,8 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-top: 15.6px;
     object-fit: cover;
   }
-  .circle2{
-    top:-32px;
+  .circle2 {
+    top: -32px;
   }
   .container1 .container2 {
     max-width: 440px;
@@ -751,7 +822,7 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: center;
     font-size: 46px;
   }
-  .header .nav{
+  .header .nav {
     padding-top: 10px;
   }
   .nav .nav-child2 .lightmode {
@@ -850,13 +921,13 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 3px;
     border: 1px solid #f0f0f0;
   }
-  .aboutmesmall_skills .child1 .frontend_btn::before{
+  .aboutmesmall_skills .child1 .frontend_btn::before {
     content: "🎉";
   }
-  .aboutmesmall_skills .child1 .backend_btn::before{
+  .aboutmesmall_skills .child1 .backend_btn::before {
     content: "🎊";
   }
-  .aboutmesmall_skills .child1 .all_btn::before{
+  .aboutmesmall_skills .child1 .all_btn::before {
     content: "✌️";
   }
   .aboutmesmall_skills .child2 {
@@ -943,4 +1014,12 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 70px;
     height: 60px;
   }
+}
+
+/* darkmode */
+.dark1{
+  background-color: #565555 !important;
+}
+.headerdark{
+  background-color: #293235 !important;
 }

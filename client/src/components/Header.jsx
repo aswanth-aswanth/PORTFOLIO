@@ -1,10 +1,17 @@
 import React from "react";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import MenuIcon from "@mui/icons-material/Menu";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { motion } from "framer-motion";
+
+import { useStore } from "../store/store.js";
+
 function Header() {
+  const setDarkMode = useStore((state) => state.setDarkMode);
+  const darkMode = useStore((state) => state.darkMode);
+
   return (
-    <div className="header">
+    <div className={`header ${darkMode? `headerdark`:null}`} >
       <div className="nav">
         <div className="nav-child1">
           <div className="icon">
@@ -13,8 +20,17 @@ function Header() {
           <h1>Aswanth</h1>
         </div>
         <div className="nav-child2">
-          <LightModeIcon className="lightmode" />
-          <MenuIcon className="menu" />
+          {darkMode ? (
+            <LightModeIcon
+              onClick={() => setDarkMode()}
+              className="lightmode"
+            />
+          ) : (
+            <DarkModeIcon onClick={() => setDarkMode()} className="lightmode" />
+          )}
+          <a href="mailto:aswanthndl@gmail.com" style={{color:'white'}}>
+            <MailOutlineIcon className="menu" />
+          </a>
         </div>
       </div>
       <div className="circle1"></div>
@@ -77,66 +93,72 @@ function Header() {
       </motion.p>
       <p className="p3">Follow me</p>
       <div className="icons">
-        <motion.img
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          initial={{
-            x: -100,
-            opacity: 0,
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-          }}
-          viewport={{ amount: "all", margin: "-100px" }}
-          transition={{
-            opacity: { delay: 0.5 },
-            x: { delay: 0.5, type: "spring", stiffness: 400, damping: 17 },
-            scale: { type: "spring", stiffness: 400, damping: 17 }, // No delay for scale
-          }}
-          src="/assets/Social_icons/instagram-tile.svg"
-          alt=""
-        />
-        <motion.img
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          initial={{
-            x: -100,
-            opacity: 0,
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-          }}
-          viewport={{ amount: "all", margin: "-100px" }}
-          transition={{
-            opacity: { delay: 0.5 },
-            x: { delay: 0.5, type: "spring", stiffness: 400, damping: 17 },
-            scale: { type: "spring", stiffness: 400, damping: 17 }, // No delay for scale
-          }}
-          src="/assets/Social_icons/github.svg"
-          alt=""
-        />
-        <motion.img
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          initial={{
-            x: -50,
-            opacity: 0,
-          }}
-          whileInView={{
-            x: 0,
-            opacity: 1,
-          }}
-          viewport={{ amount: "all", margin: "-100px" }}
-          transition={{
-            opacity: { delay: 0.5 },
-            x: { delay: 0.5, type: "spring", stiffness: 400, damping: 17 },
-            scale: { type: "spring", stiffness: 400, damping: 17 }, // No delay for scale
-          }}
-          src="/assets/Social_icons/linkedin.svg"
-          alt=""
-        />
+        <a href="https://www.instagram.com/aswanthndl/">
+          <motion.img
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{
+              x: -100,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            viewport={{ amount: "all", margin: "-100px" }}
+            transition={{
+              opacity: { delay: 0.5 },
+              x: { delay: 0.5, type: "spring", stiffness: 400, damping: 17 },
+              scale: { type: "spring", stiffness: 400, damping: 17 }, // No delay for scale
+            }}
+            src="/assets/Social_icons/instagram-tile.svg"
+            alt=""
+          />
+        </a>
+        <a href="https://github.com/aswanth-aswanth">
+          <motion.img
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{
+              x: -100,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            viewport={{ amount: "all", margin: "-100px" }}
+            transition={{
+              opacity: { delay: 0.5 },
+              x: { delay: 0.5, type: "spring", stiffness: 400, damping: 17 },
+              scale: { type: "spring", stiffness: 400, damping: 17 }, // No delay for scale
+            }}
+            src="/assets/Social_icons/github.svg"
+            alt=""
+          />
+        </a>
+        <a href="www.linkedin.com/in/aswanth-t-5525801ba">
+          <motion.img
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            initial={{
+              x: -50,
+              opacity: 0,
+            }}
+            whileInView={{
+              x: 0,
+              opacity: 1,
+            }}
+            viewport={{ amount: "all", margin: "-100px" }}
+            transition={{
+              opacity: { delay: 0.5 },
+              x: { delay: 0.5, type: "spring", stiffness: 400, damping: 17 },
+              scale: { type: "spring", stiffness: 400, damping: 17 }, // No delay for scale
+            }}
+            src="/assets/Social_icons/linkedin.svg"
+            alt=""
+          />
+        </a>
       </div>
       <motion.div
         initial={{ y: -50, opacity: 0 }}
