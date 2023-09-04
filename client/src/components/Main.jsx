@@ -53,7 +53,7 @@ function Main() {
             delay: 0.2,
           }}
         >
-          <h5 style={darkMode ? whitetext : null}>Software developer</h5>
+          <h5 style={darkMode ? whitetext : null}>Web developer</h5>
           <p style={darkMode ? whitetext : null}>
             I am a self motivated, independent & skilled mern stack developer. I
             am constantly seeking new challenges and opportunities to enhance my

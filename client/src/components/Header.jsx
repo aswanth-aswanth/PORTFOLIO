@@ -1,7 +1,7 @@
 import React from "react";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import { motion } from "framer-motion";
 
 import { useStore } from "../store/store.js";
@@ -11,7 +11,7 @@ function Header() {
   const darkMode = useStore((state) => state.darkMode);
 
   return (
-    <div className={`header ${darkMode? `headerdark`:null}`} >
+    <div className={`header ${darkMode ? `headerdark` : null}`}>
       <div className="nav">
         <div className="nav-child1">
           <div className="icon">
@@ -26,9 +26,12 @@ function Header() {
               className="lightmode"
             />
           ) : (
-            <DarkModeIcon onClick={() => setDarkMode()} className="lightmode" />
+            <DarkModeOutlinedIcon
+              onClick={() => setDarkMode()}
+              className="lightmode"
+            />
           )}
-          <a href="mailto:aswanthndl@gmail.com" style={{color:'white'}}>
+          <a href="mailto:aswanthndl@gmail.com" style={{ color: "white" }}>
             <MailOutlineIcon className="menu" />
           </a>
         </div>
@@ -89,7 +92,7 @@ function Header() {
         }}
         className="p2"
       >
-        A software developer
+        a web developer
       </motion.p>
       <p className="p3">Follow me</p>
       <div className="icons">
