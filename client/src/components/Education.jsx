@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { educationItems } from "../data/data";
 function Education() {
   return (
     <motion.div
@@ -19,36 +20,18 @@ function Education() {
       <h3>Education</h3>
       <div className="container1">
         <div className="container2">
-          <div className="item item1">
-            <div className="item_child1">
-              <img src="/assets/education/university_1.svg" alt="" />
+          {educationItems.map((item) => (
+            <div key={item.id} className={`item ${item.class}`}>
+              <div className="item_child1">
+                <img src={`/assets/education/${item.img}`} alt="" />
+              </div>
+              <div className="item_child2">
+                <h3>{item.year}</h3>
+                <p>{item.school}</p>
+                <p>{item.degree}</p>
+              </div>
             </div>
-            <div className="item_child2">
-              <h3>2023</h3>
-              <p>SES college</p>
-              <p>BCA</p>
-            </div>
-          </div>
-          <div className="item item2">
-            <div className="item_child1">
-              <img src="/assets/education/school.svg" alt="" />
-            </div>
-            <div className="item_child2">
-              <h3>2020</h3>
-              <p>St.Joseph's HSS</p>
-              <p>Computer Science</p>
-            </div>
-          </div>
-          <div className="item item3">
-            <div className="item_child1">
-              <img src="/assets/education/school.svg" alt="" />
-            </div>
-            <div className="item_child2">
-              <h3>2018</h3>
-              <p>Govt.Technical HS</p>
-              <p>THSLC</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </motion.div>

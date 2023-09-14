@@ -1,24 +1,39 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useStore } from "../store/store";
+import { social } from "../data/data";
+
+function SocialLink({ item }) {
+  return (
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: -50,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
+      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      className="item"
+      key={item.id}
+    >
+      <a href={item.link}>
+        <img src={`/assets/Social_icons/${item.account}`} alt="" />
+      </a>
+    </motion.div>
+  );
+}
 
 function Main() {
   const darkMode = useStore((state) => state.darkMode);
 
-  const social = [
-    { id: 1, account: "instagram-tile.svg", link: "https://www.instagram.com/aswanthndl/" },
-    { id: 2, account: "github.svg", link: "https://github.com/aswanth-aswanth" },
-    {
-      id: 3,
-      account: "linkedin.svg",
-      link: "https://www.linkedin.com/in/aswanth-t-5525801ba/",
-    },
-    { id: 4, account: "fb.svg" ,link:" "},
-  ];
   const whitetext = {
     color: "white",
   };
-  // darkMode?(document.getElementById("root").style.backgroundColor='#444748'):(document.getElementById("root").style.backgroundColor='#444748')
+
   if (darkMode) {
     document.getElementById("root").style.backgroundColor = "#444748";
   } else {
@@ -54,27 +69,12 @@ function Main() {
           }}
         >
           <h5 style={darkMode ? whitetext : null}>Web developer</h5>
-          <p style={darkMode ? whitetext : null}>
-            I am a self motivated, independent & skilled mern stack developer. I
-            am constantly seeking new challenges and opportunities to enhance my
-            skills and contribute to innovative projects.
-          </p>
+          <p style={darkMode ? whitetext : null}>I am a self motivated, independent & skilled mern stack developer. I am constantly seeking new challenges and opportunities to enhance my skills and contribute to innovative projects.</p>
           <div className="main_btn_parent">
-            <motion.button
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="main_btn"
-            >
+            <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 17 }} className="main_btn">
               Work with me
             </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="main_btn"
-              style={{ marginLeft: "10px" }}
-            >
+            <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 17 }} className="main_btn" style={{ marginLeft: "10px" }}>
               Download CV
             </motion.button>
           </div>
@@ -110,25 +110,7 @@ function Main() {
         </motion.p>
         <div className="main-child3_child">
           {social.map((item) => (
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: -50,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="item"
-              key={item.id}
-            >
-              <a href={item.link}>
-                <img src={`/assets/Social_icons/${item.account}`} alt="" />
-              </a>
-            </motion.div>
+            <SocialLink key={item.id} item={item} />
           ))}
         </div>
       </div>
