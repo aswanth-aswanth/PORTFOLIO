@@ -87,37 +87,18 @@ function Header() {
       <div className="icons">
         {headerSmallIcons.map((item) => (
           <a href={item.link} key={item.id}>
-            <motion.img
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              initial={{
-                x: -100,
-                opacity: 0,
-              }}
-              whileInView={{
-                x: 0,
-                opacity: 1,
-              }}
-              viewport={{ amount: "all", margin: "-100px" }}
-              transition={{
-                opacity: { delay: 0.8 },
-                x: { delay: 0.8, type: "spring", stiffness: 400, damping: 17 },
-                scale: { type: "spring", stiffness: 400, damping: 17 }, // No delay for scale
-              }}
-              src={`/assets/Social_icons/${item.file}`}
-              alt=""
-            />
+            <img src={`/assets/Social_icons/${item.file}`} alt="" />
           </a>
         ))}
       </div>
-      <motion.div initial={{ y: -50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ delay: 0.8 }} viewport={{ amount: "all" }} className="buttons">
-        <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 17 }}>
+      <div  className="buttons">
+        <button>
           Work with me
-        </motion.button>
-        <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 17 }}>
+        </button>
+        <button>
           Download CV
-        </motion.button>
-      </motion.div>
+        </button>
+      </div>
     </div>
   );
 }
