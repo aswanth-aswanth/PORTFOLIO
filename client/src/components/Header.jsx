@@ -91,13 +91,9 @@ function Header() {
           </a>
         ))}
       </div>
-      <div  className="buttons">
-        <button>
-          Work with me
-        </button>
-        <button>
-          Download CV
-        </button>
+      <div className="buttons">
+        <button>Work with me</button>
+        <button>Download CV</button>
       </div>
     </div>
   );
