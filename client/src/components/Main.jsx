@@ -1,120 +1,180 @@
+// Main.jsx
 import React from "react";
 import { motion } from "framer-motion";
 import { useStore } from "../store/store";
 import { social } from "../data/data";
+import styled from "styled-components";
 
-function SocialLink({ item }) {
-  return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: -50,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 0.9 }}
-      transition={{ type: "spring", stiffness: 400, damping: 17 }}
-      className="item"
-      key={item.id}
-    >
-      <a href={item.link}>
-        <img src={`/assets/Social_icons/${item.account}`} alt="" />
-      </a>
-    </motion.div>
-  );
-}
+const MainContainer = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  background-color: ${(props) => (props.darkMode ? "#333" : "#f8f9fa")};
+  color: ${(props) => (props.darkMode ? "#fff" : "#333")};
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+const ContentSection = styled.section`
+  max-width: 600px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+`;
+
+const Title = styled(motion.h1)`
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+`;
+
+const Subtitle = styled(motion.h2)`
+  font-size: 1.5rem;
+  color: ${(props) => (props.darkMode ? "#ddd" : "#666")};
+  margin-bottom: 1rem;
+`;
+
+const Description = styled(motion.p)`
+  font-size: 1rem;
+  margin-bottom: 2rem;
+`;
+
+const ButtonGroup = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
+`;
+
+const Button = styled(motion.button)`
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:first-child {
+    background-color: #007bff;
+    color: white;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+
+  &:last-child {
+    background-color: #6c757d;
+    color: white;
+
+    &:hover {
+      background-color: #545b62;
+    }
+  }
+`;
+
+const ImageSection = styled(motion.section)`
+  margin-top: 2rem;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+`;
+
+const SocialLinks = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+`;
+
+const SocialIcon = styled(motion.a)`
+  img {
+    width: 30px;
+    height: 30px;
+  }
+`;
 
 function Main() {
   const darkMode = useStore((state) => state.darkMode);
 
-  const whitetext = {
-    color: "white",
-  };
-
-  if (darkMode) {
-    document.getElementById("root").style.backgroundColor = "#444748";
-  } else {
-    document.getElementById("root").style.backgroundColor = "white";
-  }
   return (
-    <div className={`main ${darkMode && "dark1"}`}>
-      <div className={`main-child main-child1`}>
-        <motion.h3
-          initial={{
-            opacity: 0,
-            y: -100,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          style={darkMode ? whitetext : null}
+    <MainContainer darkMode={darkMode}>
+      <ContentSection>
+        <Title
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
           Aswanth T
-        </motion.h3>
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: -100,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 0.2,
-          }}
+        </Title>
+        <Subtitle
+          darkMode={darkMode}
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h5 style={darkMode ? whitetext : null}>Web developer</h5>
-          <p style={darkMode ? whitetext : null}>I am a self motivated, independent & skilled mern stack developer. I am constantly seeking new challenges and opportunities to enhance my skills and contribute to innovative projects.</p>
-          <div className="main_btn_parent">
-            <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 17 }} className="main_btn">
-              Work with me
-            </motion.button>
-            <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 17 }} className="main_btn" style={{ marginLeft: "10px" }}>
-              Download CV
-            </motion.button>
-          </div>
-        </motion.div>
-      </div>
-      <motion.div
-        initial={{
-          y: -50,
-          opacity: 0,
-        }}
-        whileInView={{ opacity: 1, y: 0 }}
-        // transition={{ delay: 0.4 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        transition={{ type: "spring", stiffness: 400, damping: 17 }}
-        className="main-child main-child2"
+          Web Developer
+        </Subtitle>
+        <Description
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          I am a self-motivated, independent & skilled MERN stack developer. I am constantly seeking new challenges and opportunities to enhance my skills and contribute to innovative projects.
+        </Description>
+        <ButtonGroup>
+          <Button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Work with me
+          </Button>
+          <Button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Download CV
+          </Button>
+        </ButtonGroup>
+      </ContentSection>
+      <ImageSection
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
       >
-        <img src="/assets/profile-pic1.webp" alt="" />
-      </motion.div>
-      <div className="main-child main-child3">
-        <motion.p
-          initial={{
-            opacity: 0,
-            y: -50,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          style={darkMode ? whitetext : null}
-        >
-          Follow me
-        </motion.p>
-        <div className="main-child3_child">
-          {social.map((item) => (
-            <SocialLink key={item.id} item={item} />
-          ))}
-        </div>
-      </div>
-    </div>
+        <img src="/assets/profile-pic1.webp" alt="Aswanth T" />
+      </ImageSection>
+      <SocialLinks>
+        {social.map((item) => (
+          <SocialIcon
+            key={item.id}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <img src={`/assets/Social_icons/${item.account}`} alt={item.account} />
+          </SocialIcon>
+        ))}
+      </SocialLinks>
+    </MainContainer>
   );
 }
 
