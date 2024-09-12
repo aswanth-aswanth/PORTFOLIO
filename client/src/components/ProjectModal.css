@@ -51,7 +51,7 @@
 }
 
 .modal-image-container {
-  max-height: 50vh;
+  max-height: 40vh;
   overflow-y: auto;
   margin-bottom: 1rem;
   border-radius: 8px;
