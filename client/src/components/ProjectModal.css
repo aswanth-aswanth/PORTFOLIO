@@ -1,0 +1,128 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.modal-content.dark-mode {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-icon {
+  cursor: pointer;
+  color: #ff0000;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+}
+
+.close-icon:hover {
+  transform: scale(1.1);
+}
+
+.modal-content.dark-mode .close-icon {
+  color: #ff6b6b;
+}
+
+.modal-image-container {
+  max-height: 60vh;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.modal-image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.modal-image-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-image-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-image-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.modal-content.dark-mode .modal-image-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.modal-body {
+  font-size: 14px;
+  overflow-y: auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.modal-content.dark-mode .modal-body {
+  color: #ddd;
+}
+
+.modal-content.dark-mode h2,
+.modal-content.dark-mode h4 {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    width: 70%;
+    max-width: 800px;
+    padding: 1rem 2rem;
+  }
+
+  .modal-body {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  .modal-image-container {
+    max-height: 50vh;
+  }
+}

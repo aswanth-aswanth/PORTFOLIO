@@ -21,7 +21,11 @@ export const headerSmallIcons = [
 
 // social icons on big screens
 export const social = [
-  { id: 1, account: "instagram-tile.svg", link: "https://www.instagram.com/aswanthndl/" },
+  {
+    id: 1,
+    account: "instagram-tile.svg",
+    link: "https://www.instagram.com/aswanthndl/",
+  },
   { id: 2, account: "github.svg", link: "https://github.com/aswanth-aswanth" },
   {
     id: 3,
@@ -91,7 +95,7 @@ export const backendIcons = [
   },
 ];
 
-export const allSkills=[
+export const allSkills = [
   { id: 1, tech: "HTML5.svg", name: "HTML" },
   { id: 2, tech: "CSS3.svg", name: "CSS" },
   { id: 3, tech: "js.svg", name: "JAVASCRIPT" },
@@ -107,20 +111,44 @@ export const allSkills=[
 ];
 
 export const projectLists = [
-  { id: 1, name: "PROJECT MANAGEMENT", url: "project-management.webp" },
-  { id: 2, name: "TASK MANAGEMENT", url: "task-app.webp" },
-  { id: 3, name: "BLOG APP", url: "blog-app.webp" },
-  { id: 4, name: "CHAT APP", url: "chatapp.webp" },
+  {
+    id: 1,
+    name: "PROJECT MANAGEMENT",
+    url: "project-management.webp",
+    description: "This is the first project. It showcases X and Y features.",
+    technologies: ["React", "Framer Motion", "CSS"],
+  },
+  {
+    id: 2,
+    name: "TASK MANAGEMENT",
+    url: "task-app.webp",
+    description: "This is the first project. It showcases X and Y features.",
+    technologies: ["React", "Framer Motion", "CSS"],
+  },
+  {
+    id: 3,
+    name: "BLOG APP",
+    url: "blog-app.webp",
+    description: "This is the first project. It showcases X and Y features.",
+    technologies: ["React", "Framer Motion", "CSS"],
+  },
+  {
+    id: 4,
+    name: "CHAT APP",
+    url: "chatapp.webp",
+    description: "This is the first project. It showcases X and Y features.",
+    technologies: ["React", "Framer Motion", "CSS"],
+  },
 ];
 
-export  const educationItems = [
+export const educationItems = [
   {
     id: 1,
     img: "university_1.svg",
     year: "2023",
     school: "SES college",
     degree: "BCA",
-    class:'item1'
+    class: "item1",
   },
   {
     id: 2,
@@ -128,7 +156,7 @@ export  const educationItems = [
     year: "2020",
     school: "St.Joseph's HSS",
     degree: "Computer Science",
-    class:'item2'
+    class: "item2",
   },
   {
     id: 3,
@@ -136,6 +164,6 @@ export  const educationItems = [
     year: "2018",
     school: "Govt.Technical HS",
     degree: "THSLC",
-    class:'item3'
+    class: "item3",
   },
 ];
