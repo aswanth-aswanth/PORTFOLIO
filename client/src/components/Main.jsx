@@ -2,22 +2,42 @@ import { motion } from "framer-motion";
 import { useStore } from "../store/store";
 import { social } from "../data/data";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 24,
+    },
+  },
+};
+
 function SocialLink({ item }) {
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        y: -50,
+      variants={itemVariants}
+      whileHover={{
+        scale: 1.2,
+        rotate: [0, -10, 10, -10, 0],
+        transition: {
+          duration: 0.3,
+        },
       }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.9 }}
-      transition={{ type: "spring", stiffness: 400, damping: 17 }}
       className="item"
-      key={item.id}
     >
       <a href={item.link}>
         <img src={`/assets/Social_icons/${item.account}`} alt="" />
@@ -28,7 +48,6 @@ function SocialLink({ item }) {
 
 function Main() {
   const darkMode = useStore((state) => state.darkMode);
-
   const whitetext = {
     color: "white",
   };
@@ -38,34 +57,21 @@ function Main() {
   } else {
     document.getElementById("root").style.backgroundColor = "white";
   }
+
   return (
     <div className={`main ${darkMode && "dark1"}`}>
       <div className={`main-child main-child1`}>
         <motion.h3
-          initial={{
-            opacity: 0,
-            y: -100,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
           style={darkMode ? whitetext : null}
         >
           Aswanth T
         </motion.h3>
         <motion.div
-          initial={{
-            opacity: 0,
-            y: -100,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 0.2,
-          }}
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
         >
           <h5 style={darkMode ? whitetext : null}>Web developer</h5>
           <p style={darkMode ? whitetext : null}>
@@ -95,12 +101,8 @@ function Main() {
         </motion.div>
       </div>
       <motion.div
-        initial={{
-          y: -50,
-          opacity: 0,
-        }}
+        initial={{ y: -50, opacity: 0 }}
         whileInView={{ opacity: 1, y: 0 }}
-        // transition={{ delay: 0.4 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -110,23 +112,23 @@ function Main() {
       </motion.div>
       <div className="main-child main-child3">
         <motion.p
-          initial={{
-            opacity: 0,
-            y: -50,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           style={darkMode ? whitetext : null}
         >
           Follow me
         </motion.p>
-        <div className="main-child3_child">
+        <motion.div
+          className="main-child3_child"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.8 }}
+        >
           {social.map((item) => (
             <SocialLink key={item.id} item={item} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

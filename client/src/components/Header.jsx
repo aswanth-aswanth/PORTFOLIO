@@ -2,10 +2,9 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { headerSmallIcons } from "../data/data.js";
-
 import { useStore } from "../store/store.js";
 import { useEffect, useRef } from "react";
+import EnhancedHeaderSection from "./EnhancedHeaderSection.jsx";
 
 function Header() {
   const setDarkMode = useStore((state) => state.setDarkMode);
@@ -99,17 +98,7 @@ function Header() {
         a web developer
       </motion.p>
       <p className="p3">Follow me</p>
-      <div className="icons">
-        {headerSmallIcons.map((item) => (
-          <a href={item.link} key={item.id}>
-            <img src={`/assets/Social_icons/${item.file}`} alt="" />
-          </a>
-        ))}
-      </div>
-      <div className="buttons">
-        <button>Work with me</button>
-        <button>Download CV</button>
-      </div>
+      <EnhancedHeaderSection />
     </div>
   );
 }
