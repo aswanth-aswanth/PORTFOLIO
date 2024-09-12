@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { useStore } from "../store/store";
 import { social } from "../data/data";
@@ -69,12 +68,27 @@ function Main() {
           }}
         >
           <h5 style={darkMode ? whitetext : null}>Web developer</h5>
-          <p style={darkMode ? whitetext : null}>I am a self motivated, independent & skilled mern stack developer. I am constantly seeking new challenges and opportunities to enhance my skills and contribute to innovative projects.</p>
+          <p style={darkMode ? whitetext : null}>
+            I am a self motivated, independent & skilled mern stack developer. I
+            am constantly seeking new challenges and opportunities to enhance my
+            skills and contribute to innovative projects.
+          </p>
           <div className="main_btn_parent">
-            <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 17 }} className="main_btn">
+            <motion.button
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className="main_btn"
+            >
               Work with me
             </motion.button>
-            <motion.button whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 400, damping: 17 }} className="main_btn" style={{ marginLeft: "10px" }}>
+            <motion.button
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className="main_btn"
+              style={{ marginLeft: "10px" }}
+            >
               Download CV
             </motion.button>
           </div>
@@ -92,7 +106,7 @@ function Main() {
         transition={{ type: "spring", stiffness: 400, damping: 17 }}
         className="main-child main-child2"
       >
-        <img src="/assets/profile-pic1.webp" alt="" />
+        <img src="/assets/profile-pic1.png" alt="" />
       </motion.div>
       <div className="main-child main-child3">
         <motion.p

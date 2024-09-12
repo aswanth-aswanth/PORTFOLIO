@@ -1,17 +1,33 @@
-import React from "react";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { headerSmallIcons } from "../data/data.js";
 
 import { useStore } from "../store/store.js";
+import { useEffect, useRef } from "react";
 
 function Header() {
   const setDarkMode = useStore((state) => state.setDarkMode);
   const darkMode = useStore((state) => state.darkMode);
 
-  const icon = darkMode ? <LightModeIcon onClick={() => setDarkMode()} className="lightmode" /> : <DarkModeOutlinedIcon onClick={() => setDarkMode()} className="lightmode" />;
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start({ y: 0 });
+    } else {
+      controls.start({ y: -40 });
+    }
+  }, [isInView, controls]);
+
+  const icon = darkMode ? (
+    <LightModeIcon onClick={() => setDarkMode()} className="lightmode" />
+  ) : (
+    <DarkModeOutlinedIcon onClick={() => setDarkMode()} className="lightmode" />
+  );
 
   return (
     <div className={`header ${darkMode ? `headerdark` : null}`}>
@@ -32,20 +48,19 @@ function Header() {
       <div className="circle1"></div>
       <div className="circle2">
         <motion.div
+          ref={ref}
+          animate={controls}
+          initial={{ y: -40 }}
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
-          initial={{ y: -40 }}
-          whileInView={{ y: 0 }}
-          viewport={{ amount: "all" }}
           transition={{
-            delay: 0.4,
             type: "spring",
             stiffness: 400,
             damping: 14,
           }}
           className="circle1_child"
         >
-          <img src="/assets/profile-pic (9).webp" alt="" />
+          <img src="/assets/profile-pic (5).png" alt="" />
         </motion.div>
       </div>
       <motion.p
