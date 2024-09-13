@@ -59,7 +59,7 @@ function Header() {
           }}
           className="circle1_child"
         >
-          <img src="/assets/profile-pic (5).png" alt="" />
+          <img src="/assets/profile-pic (5).webp" alt="" />
         </motion.div>
       </div>
       <motion.p
