@@ -86,13 +86,18 @@ function EnhancedHeaderSection() {
         >
           <motion.span variants={buttonVariants}>Work with me</motion.span>
         </motion.button>
-        <motion.button
+        <motion.a
+          href="https://drive.google.com/uc?export=download&id=1gzox-ML1BlZwBj7Xec2FaXfvDS5ixGAn"
+          target="_blank"
+          rel="noopener noreferrer"
           variants={itemVariants}
           whileHover="hover"
           whileTap="tap"
         >
-          <motion.span variants={buttonVariants}>Download CV</motion.span>
-        </motion.button>
+          <motion.button>
+            <motion.span variants={buttonVariants}>Download CV</motion.span>
+          </motion.button>
+        </motion.a>
       </motion.div>
     </>
   );

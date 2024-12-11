@@ -88,15 +88,24 @@ function Main() {
             >
               Work with me
             </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="main_btn"
-              style={{ marginLeft: "10px" }}
+            <motion.a
+              href="https://drive.google.com/uc?export=download&id=1gzox-ML1BlZwBj7Xec2FaXfvDS5ixGAn"
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={itemVariants}
+              whileHover="hover"
+              whileTap="tap"
             >
-              Download CV
-            </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="main_btn"
+                style={{ marginLeft: "10px" }}
+              >
+                Download CV
+              </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </div>
